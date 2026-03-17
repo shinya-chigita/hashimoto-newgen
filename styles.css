@@ -66,6 +66,14 @@ body {
 .policy-link { margin-top: 12px; font-weight: 700; }
 .policy-link a { color: var(--primary); }
 .cta { text-align: center; }
+.vote-cta {
+  background: linear-gradient(135deg, #fff4e5, #ffe08a);
+  border: 3px solid #ffb300;
+  border-radius: 14px;
+  padding: 24px;
+}
+.vote-cta h2 { font-size: 40px; margin: 0 0 8px; color: #a10000; }
+.vote-cta-lead { font-size: 22px; font-weight: 800; margin: 0 0 8px; }
 footer { text-align: center; color: var(--muted); padding: 24px; }
 @media (max-width: 760px) {
   .links { display:none; }
