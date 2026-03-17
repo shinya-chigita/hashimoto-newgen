@@ -4,6 +4,7 @@
   --primary: #0f4c81;
   --text: #1c2733;
   --muted: #627284;
+  --danger: #b00020;
 }
 * { box-sizing: border-box; }
 body {
@@ -27,7 +28,7 @@ body {
 .hero-inner { max-width: 1000px; margin: 28px auto 0; padding: 0 20px; }
 .vote-day-banner {
   background: #fff;
-  color: #b00020;
+  color: var(--danger);
   border: 4px solid #ffd54f;
   border-radius: 14px;
   padding: 18px;
@@ -37,22 +38,30 @@ body {
 .vote-date { margin: 0; font-weight: 800; font-size: 28px; }
 .vote-day-banner h2 { margin: 6px 0; font-size: 34px; line-height: 1.25; }
 .vote-main { margin: 0; font-size: 20px; font-weight: 700; color: #222; }
-.vote-early { margin: 8px 0 0; font-size: 18px; color: #b00020; font-weight: 700; }
-.hero h1 { font-size: 44px; margin: 8px 0 8px; }
-.tag { opacity: .9; margin: 0; }
+.vote-early { margin: 8px 0 0; font-size: 18px; color: var(--danger); font-weight: 700; }
+.tag { opacity: .95; margin: 0; font-weight: 700; }
+.hero h1 { font-size: 40px; margin: 8px 0 8px; line-height: 1.3; }
+.lead { font-size: 18px; }
+.hero-points { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0; }
+.point {
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
 .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero-actions.center { justify-content: center; }
 .btn {
   display: inline-block; margin-top: 14px; padding: 11px 18px;
   background: white; color: var(--primary); text-decoration: none;
   border-radius: 10px; font-weight: 700;
 }
-.btn-secondary {
-  background: #ffd54f;
-  color: #1d1d1d;
-}
-.btn-secondary:hover { filter: brightness(0.95); }
+.btn-secondary { background: #ffd54f; color: #1d1d1d; }
+.btn-accent { background: #ff5252; color: #fff; }
 .section { max-width: 1000px; margin: 36px auto; padding: 0 20px; }
 .section h2 { margin-bottom: 12px; }
+.section-lead { font-size: 18px; margin-bottom: 14px; }
 .grid { display: grid; gap: 14px; }
 .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -60,16 +69,23 @@ body {
   background: var(--card); border-radius: 12px; padding: 18px;
   box-shadow: 0 5px 14px rgba(15,76,129,.08);
 }
-.stat h3 { margin: 0 0 6px; color: var(--primary); font-size: 34px; }
+.graph-title { font-weight: 800; margin-top: 0; }
+.bar-row { display: grid; grid-template-columns: 180px 1fr; gap: 10px; align-items: center; margin-bottom: 10px; }
+.bar-track { width: 100%; height: 18px; background: #e9eef5; border-radius: 999px; overflow: hidden; }
+.bar { height: 100%; border-radius: 999px; }
+.bar.national { background: #7aa6d9; }
+.bar.hashimoto { background: #ff6b6b; }
+.danger-box { border-left: 6px solid var(--danger); }
 .alt { background: #eef4fa; padding: 20px; border-radius: 12px; }
-.note, .small { color: var(--muted); font-size: 14px; }
+.policy-card h3 { margin-top: 0; }
+.policy-card.strong { border: 2px solid #ffd54f; }
+.small { color: var(--muted); font-size: 14px; }
 .policy-link { margin-top: 12px; font-weight: 700; }
 .policy-link a { color: var(--primary); }
 .policy-link-with-image {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  gap: 14px;
 }
 .policy-inline-photo {
   width: 96px;
@@ -86,16 +102,16 @@ body {
   border-radius: 14px;
   padding: 24px;
 }
-.vote-cta h2 { font-size: 40px; margin: 0 0 8px; color: #a10000; }
+.vote-cta h2 { font-size: 36px; margin: 0 0 8px; color: #a10000; }
 .vote-cta-lead { font-size: 22px; font-weight: 800; margin: 0 0 8px; }
 footer { text-align: center; color: var(--muted); padding: 24px; }
 @media (max-width: 760px) {
-  .links { display:none; }
-  .hero h1 { font-size: 34px; }
+  .links { display: none; }
+  .hero h1 { font-size: 30px; }
   .vote-date { font-size: 22px; }
   .vote-day-banner h2 { font-size: 28px; }
   .vote-main, .vote-early { font-size: 16px; }
   .grid.three, .grid.two { grid-template-columns: 1fr; }
-  .policy-link-with-image { flex-direction: row; align-items: center; }
+  .bar-row { grid-template-columns: 1fr; }
   .policy-inline-photo { width: 84px; height: 84px; }
 }

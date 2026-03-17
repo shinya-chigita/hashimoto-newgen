@@ -4,70 +4,136 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>はしもと新時代 | 公式サイト</title>
-  <meta name="description" content="はしもと新時代の公式サイト。地域の未来に向けた政策提案と活動方針を掲載しています。" />
+  <meta name="description" content="確認団体ビラの内容に基づいた、はしもと新時代の公式サイトです。" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body id="top">
   <header class="hero">
     <nav class="nav">
       <div class="logo">はしもと新時代</div>
       <div class="links">
-        <a href="#issues">課題</a>
-        <a href="#policy">政策</a>
-        <a href="#vote-cta">投票に行こう</a>
+        <a href="#problem">現状</a>
+        <a href="#policies">6つの政策</a>
+        <a href="#vote">投票へ行こう</a>
       </div>
     </nav>
+
     <div class="hero-inner">
       <div class="vote-day-banner">
         <p class="vote-date">3月22日（日）</p>
-        <h2>橋本市長選挙投票日！</h2>
+        <h2>橋本市長選挙 投票日！</h2>
         <p class="vote-main">橋本の未来が決まる一日。</p>
         <p class="vote-early">3月16日（月）～3月21日（土）は期日前投票も可能です！</p>
       </div>
 
-      <p class="tag">地域の未来を、次の世代へ。</p>
-      <h1>はしもと新時代</h1>
-      <p>
-        いま必要なのは、暮らしの不安を正面から受け止め、
-        生活者目線で一歩ずつ改善を積み重ねる政治です。
+      <p class="tag">もっと！もっとできる橋本市</p>
+      <h1>橋本市はなぜ子育て世帯に選ばれない街になったのか</h1>
+      <p class="lead">
+        全国の約1.5倍のスピードで子どもが減少。
+        いま必要なのは、危機を直視し、具体策を実行するリーダーです。
       </p>
+
+      <div class="hero-points">
+        <div class="point">全国平均 <strong>15.5%</strong></div>
+        <div class="point">橋本市 <strong>23.4%</strong></div>
+        <div class="point">39歳 <strong>新人候補</strong></div>
+      </div>
+
       <div class="hero-actions">
-        <a class="btn" href="assets/flyer.pdf" target="_blank" rel="noopener">配布ビラを見る（PDF）</a>
-        <a class="btn btn-secondary" href="https://drive.google.com/file/d/1YbdmT0dmbDV8NvFA25mbJTmY48W0Y860/view?usp=sharing" target="_blank" rel="noopener">「政策集」はこちら</a>
+        <a class="btn btn-secondary" href="#policies">詳しい政策を見る</a>
+        <a class="btn" href="assets/flyer.pdf" target="_blank" rel="noopener">PDFを見る</a>
+        <a class="btn btn-accent" href="#vote">投票へ行こう</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="issues" class="section">
-      <h2>いま、向き合うべき課題</h2>
-      <div class="grid three">
-        <article class="card stat"><h3>23.4%</h3><p>【資料より】人口・地域指標に関する重要な数値（要確認）</p></article>
-        <article class="card stat"><h3>15.5%</h3><p>【資料より】暮らし・経済関連の指標（要確認）</p></article>
-        <article class="card stat"><h3>39%</h3><p>【資料より】将来世代・地域課題に関する比率（要確認）</p></article>
+    <section id="problem" class="section">
+      <h2>危機の現状（数字の意味）</h2>
+      <p class="section-lead">
+        子どもの減少率は、全国平均15.5%に対して橋本市23.4%。
+        約1.5倍の速さで減少しています。
+      </p>
+
+      <div class="graph card">
+        <p class="graph-title">子どもの減少率 比較</p>
+        <div class="bar-row">
+          <span>全国平均 15.5%</span>
+          <div class="bar-track"><div class="bar national" style="width: 66%;"></div></div>
+        </div>
+        <div class="bar-row">
+          <span>橋本市 23.4%</span>
+          <div class="bar-track"><div class="bar hashimoto" style="width: 100%;"></div></div>
+        </div>
+        <p class="small">比較比率：23.4 ÷ 15.5 ≒ 1.5</p>
+      </div>
+
+      <div class="grid two">
+        <article class="card danger-box">
+          <h3>人数の実数変化</h3>
+          <p><strong>7,770人 → 5,949人</strong></p>
+          <p><strong>1,821人減少</strong></p>
+        </article>
+        <article class="card">
+          <h3>いま動く理由</h3>
+          <p>このまま放置すれば、教育・医療・交通など暮らしの基盤に影響が広がります。</p>
+          <p>問題を解決すれば、もっと良い街になる。橋本はまだ変えられます。</p>
+        </article>
       </div>
     </section>
 
-    <section id="policy" class="section alt">
-      <h2>重点政策（ビラ内容ベース）</h2>
-      <div class="grid two">
-        <article class="card">
-          <h3>暮らしと地域経済の底上げ</h3>
+    <section id="policies" class="section alt">
+      <h2>6つの重点政策</h2>
+      <div class="grid three policy-grid">
+        <article class="card policy-card">
+          <h3>① 地域経済</h3>
           <ul>
-            <li>中小事業者・地域産業の支援強化</li>
-            <li>駅前や生活拠点のにぎわい創出</li>
-            <li>ふるさと納税・地域資源活用の推進</li>
+            <li>道の駅整備</li>
+            <li>駅前にぎわい創出</li>
+            <li>地場産業ブランド化</li>
+            <li>ふるさと納税</li>
           </ul>
         </article>
-        <article class="card">
-          <h3>生活インフラの再設計</h3>
+        <article class="card policy-card strong">
+          <h3>② ゴミ収集</h3>
           <ul>
-            <li>ごみ収集・生活サービスの改善</li>
-            <li>交通・移動不安の解消に向けた施策</li>
-            <li>子育て世帯の負担軽減</li>
+            <li>県内で橋本市だけ週1回</li>
+            <li>週2回に拡充</li>
+          </ul>
+        </article>
+        <article class="card policy-card">
+          <h3>③ 地域交通</h3>
+          <ul>
+            <li>交通の専門家が設計</li>
+            <li>移動不安の解消</li>
+            <li>グリーンスローモビリティ導入</li>
+          </ul>
+        </article>
+        <article class="card policy-card strong">
+          <h3>④ 教育</h3>
+          <ul>
+            <li>県内最低水準の教育予算を見直し</li>
+            <li>子どもに全力投資</li>
+            <li>教育モデル都市へ</li>
+          </ul>
+        </article>
+        <article class="card policy-card strong">
+          <h3>⑤ 市民病院</h3>
+          <ul>
+            <li>医師不足・赤字拡大に対応</li>
+            <li>12.2億 → 8.4億に削減</li>
+            <li>国政パイプで改善を加速</li>
+          </ul>
+        </article>
+        <article class="card policy-card">
+          <h3>⑥ 学校統廃合</h3>
+          <ul>
+            <li>統廃合ありきでは進めない</li>
+            <li>多世代交流拠点へ再設計</li>
           </ul>
         </article>
       </div>
+
       <p class="policy-link">政策集の詳細版：<a href="https://drive.google.com/file/d/1YbdmT0dmbDV8NvFA25mbJTmY48W0Y860/view?usp=sharing" target="_blank" rel="noopener">「政策集」はこちら</a></p>
       <div class="policy-link policy-link-with-image">
         <img src="assets/konishi-masahiro.png" alt="小西政宏さん" class="policy-inline-photo" />
@@ -78,11 +144,15 @@
       </div>
     </section>
 
-    <section id="vote-cta" class="section cta vote-cta">
-      <h2>投票に行こう！</h2>
+    <section id="vote" class="section cta vote-cta">
+      <h2>危機を、希望に。投票へ行こう。</h2>
       <p class="vote-cta-lead">3月22日（日）は橋本市長選挙の投票日です。</p>
-      <p>橋本の未来が決まる大切な一日。あなたの一票を、必ず届けましょう。</p>
-      <p class="small">期日前投票：3月16日（月）～3月21日（土）</p>
+      <p>あなたの一票が、子どもたちの未来と橋本の暮らしを変える力になります。</p>
+      <div class="hero-actions center">
+        <a class="btn btn-secondary" href="#policies">詳しい政策を見る</a>
+        <a class="btn" href="assets/flyer.pdf" target="_blank" rel="noopener">PDFを見る</a>
+        <a class="btn btn-accent" href="#top">投票へ行こう</a>
+      </div>
     </section>
   </main>
 
