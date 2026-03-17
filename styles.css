@@ -72,9 +72,10 @@ body {
   gap: 16px;
 }
 .policy-inline-photo {
-  width: 72px;
-  height: 72px;
+  width: 96px;
+  height: 96px;
   object-fit: cover;
+  object-position: center top;
   border-radius: 10px;
   border: 2px solid #d8e2ef;
 }
@@ -96,5 +97,5 @@ footer { text-align: center; color: var(--muted); padding: 24px; }
   .vote-main, .vote-early { font-size: 16px; }
   .grid.three, .grid.two { grid-template-columns: 1fr; }
   .policy-link-with-image { flex-direction: row; align-items: center; }
-  .policy-inline-photo { width: 56px; height: 56px; }
+  .policy-inline-photo { width: 84px; height: 84px; }
 }
