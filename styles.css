@@ -60,18 +60,6 @@ body {
   background: var(--card); border-radius: 12px; padding: 18px;
   box-shadow: 0 5px 14px rgba(15,76,129,.08);
 }
-.profile-card {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 18px;
-  align-items: center;
-}
-.profile-photo {
-  width: 100%;
-  max-width: 220px;
-  border-radius: 12px;
-  border: 3px solid #e2e8f0;
-}
 .stat h3 { margin: 0 0 6px; color: var(--primary); font-size: 34px; }
 .alt { background: #eef4fa; padding: 20px; border-radius: 12px; }
 .note, .small { color: var(--muted); font-size: 14px; }
@@ -84,10 +72,10 @@ body {
   gap: 16px;
 }
 .policy-inline-photo {
-  width: 120px;
-  height: 120px;
+  width: 72px;
+  height: 72px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 10px;
   border: 2px solid #d8e2ef;
 }
 .cta { text-align: center; }
@@ -107,8 +95,6 @@ footer { text-align: center; color: var(--muted); padding: 24px; }
   .vote-day-banner h2 { font-size: 28px; }
   .vote-main, .vote-early { font-size: 16px; }
   .grid.three, .grid.two { grid-template-columns: 1fr; }
-  .profile-card { grid-template-columns: 1fr; }
-  .profile-photo { max-width: 280px; margin: 0 auto; display: block; }
-  .policy-link-with-image { flex-direction: column; align-items: flex-start; }
-  .policy-inline-photo { width: 140px; height: 140px; }
+  .policy-link-with-image { flex-direction: row; align-items: center; }
+  .policy-inline-photo { width: 56px; height: 56px; }
 }
