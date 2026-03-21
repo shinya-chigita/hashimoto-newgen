@@ -25,12 +25,22 @@
   <header class="hero">
     <nav class="nav">
       <div class="logo">はしもと新時代</div>
-      <div class="links">
+      <button class="hamburger" id="hamburgerBtn" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="links nav-links">
         <a href="#problem">現状</a>
         <a href="#policies">6つの政策</a>
         <a href="#vote">投票へ行こう</a>
       </div>
     </nav>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#problem" class="mobile-menu-link">現状</a>
+      <a href="#policies" class="mobile-menu-link">6つの政策</a>
+      <a href="#vote" class="mobile-menu-link">投票へ行こう</a>
+    </div>
 
     <div class="hero-inner">
       <div class="vote-day-banner">
@@ -58,10 +68,10 @@
         <div class="point">橋本市 <strong>23.4%</strong></div>
       </div>
 
-      <div class="hero-actions">
+      <div class="hero-actions hero-cta-group">
         <a class="btn btn-secondary" href="#policies">詳しい政策を見る</a>
-        <a class="btn" href="assets/flyer.pdf" target="_blank" rel="noopener">PDFを見る</a>
-        <a class="btn btn-accent" href="#vote">投票へ行こう</a>
+        <a class="btn btn-secondary" href="assets/flyer.pdf" target="_blank" rel="noopener">PDFを見る</a>
+        <a class="btn btn-accent btn-primary" href="#vote">投票へ行こう</a>
       </div>
     </div>
   </header>
@@ -74,7 +84,7 @@
         約1.5倍の速さで減少しています。
       </p>
 
-      <div class="graph card">
+      <div class="graph card stats-block">
         <p class="graph-title">子どもの減少率 比較</p>
         <div class="bar-row">
           <span>全国平均 15.5%</span>
@@ -84,7 +94,7 @@
           <span>橋本市 23.4%</span>
           <div class="bar-track"><div class="bar hashimoto" style="width: 100%;"></div></div>
         </div>
-        <p class="small">比較比率：23.4 ÷ 15.5 ≒ 1.5</p>
+        <p class="small stat-vs">比較比率：23.4 ÷ 15.5 ≒ 1.5</p>
       </div>
 
       <div class="grid two">
@@ -152,6 +162,7 @@
           </ul>
         </article>
       </div>
+      <p class="swipe-hint">← スワイプして政策を見る →</p>
 
       <p class="policy-link">政策集の詳細版：<a href="https://drive.google.com/file/d/1YbdmT0dmbDV8NvFA25mbJTmY48W0Y860/view?usp=sharing" target="_blank" rel="noopener">「政策集」はこちら</a></p>
       <div class="policy-link policy-link-with-image">
@@ -180,6 +191,11 @@
     <p>© はしもと新時代</p>
   </footer>
 
+  <div class="mobile-fixed-cta" id="mobileFixedCta">
+    <span class="mobile-fixed-cta-text">🗳 3月22日（日）投票日！</span>
+    <a href="#vote" class="mobile-fixed-cta-btn">投票へ行こう →</a>
+  </div>
+
   <script>
     const fadeTargets = document.querySelectorAll('.hero-inner > *, .section > *, .policy-card, .card, .hero-actions, .vote-day-banner');
     fadeTargets.forEach(el => el.classList.add('fade-in'));
@@ -194,6 +210,27 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    const btn = document.getElementById('hamburgerBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('open');
+        btn.classList.toggle('open', isOpen);
+        btn.setAttribute('aria-expanded', isOpen);
+        menu.setAttribute('aria-hidden', !isOpen);
+      });
+
+      document.querySelectorAll('.mobile-menu-link').forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('open');
+          btn.classList.remove('open');
+          btn.setAttribute('aria-expanded', false);
+          menu.setAttribute('aria-hidden', true);
+        });
+      });
+    }
   </script>
 </body>
 </html>
